@@ -1,0 +1,60 @@
+name: 作業（CA向け）
+description: Cursor Cloud Agent が1PRで片付ける実装・変更
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CA はこの Issue 本文と対象リポの中身しか読めません。必要な事実はリンクではなく本文に書き写してください。個人情報・連絡先・シークレットは書かないこと。
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目的
+      description: なぜやるか。1〜2文で。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 前提・事実
+      description: 決定事項、数値、文言など、CA が知っておくべき事実をそのまま書き写す。
+    validations:
+      required: true
+  - type: textarea
+    id: todo
+    attributes:
+      label: やること
+      description: 人がやることと CA がやることを分けて書く。
+      value: |
+        【人間】
+        - 
+
+        【CA】
+        - 
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      description: 検証できる形のチェックリスト。PR の検証対応表はこれと1対1で対応させる。
+      value: "- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: dont
+    attributes:
+      label: 触らないこと
+      description: 範囲外のファイル、本番の DNS・メール・外部送信、ほかの PR など。
+    validations:
+      required: true
+  - type: dropdown
+    id: output
+    attributes:
+      label: 成果物の置き場所
+      options:
+        - main へマージ
+        - docs に記録
+        - PR のみ（マージしない）
+        - Issue コメントのみ
+    validations:
+      required: true
